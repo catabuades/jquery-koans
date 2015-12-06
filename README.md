@@ -24,4 +24,4 @@ My solutions are available on the `solutions` branch. To get this _version_ you 
 
     git checkout solutions
 
-You can also see all the tests passing at [http://juanmaguitar.github.io/JavaScript-Koans-Pro/jskoans.html](http://juanmaguitar.github.io/JavaScript-Koans-Pro/jskoans.html)
+You can also see all the tests passing at [http://juanmaguitar.github.io/jquery-koans/KoansRunner.html](http://juanmaguitar.github.io/jquery-koans/KoansRunner.html)
