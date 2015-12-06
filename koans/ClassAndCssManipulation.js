@@ -15,17 +15,15 @@ describe('ClassAndCssManipulation', function() {
 	});
 
 	it('adds class to DIV', function() {
-		$('#div-1').addClass("div-class-2");
+		$('#div-1').addClass(__);
 		expect($('#div-1')).toHaveClass('div-class-2');
 	});
 
 	it('removes class from DIV', function() {
-		$('#div-1').removeClass("div_class");
 		expect($('#div-1')).not.toHaveClass('div_class');
 	});
 
 	it('toggles class from DIV', function() {
-		$('#div-1').toggleClass("div_class");
 		expect($('#div-1')).not.toHaveClass('div_class');
 	});
 

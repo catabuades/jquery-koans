@@ -15,23 +15,23 @@ describe('Selectors', function() {
 	});
 
 	it('selects element by id', function() {
-		expect($("#div-2").attr('id')).toEqual('div-2');
+		expect($(__).attr('id')).toEqual('div-2');
 	});
 
 	it('selects elements by class', function() {
-		expect($(".div_class").attr('class')).toEqual('div_class');
+		expect($(__).attr('class')).toEqual('div_class');
 	});
 
 	it('selects child element DIV', function() {
-		expect($('#div-2 > div').attr('id')).toEqual('div-2-child');
+		expect($('__ > div').attr('id')).toEqual('div-2-child');
 	});
 
 	it('selects descendent element DIV', function() {
-		expect($('#div-2 #div-2-grandchild').attr('id')).toEqual("div-2-grandchild");
+		expect($('#div-2 #div-2-grandchild').attr('id')).toEqual(__);
 	});
 
 	it('selects all DIVs', function() {
-		expect($('#fixture div').length).toEqual(5);
+		expect($('#fixture div').length).toEqual(__);
 	});
 
 	it('iterates through matched elements', function() {
@@ -40,8 +40,8 @@ describe('Selectors', function() {
 			matchedElements.push({'id':$(this).attr('id')});
 		});
 
-		expect(matchedElements.length).toEqual(2);
-		expect(matchedElements[1].id).toEqual("div-3");
+		expect(matchedElements.length).toEqual(__);
+		expect(matchedElements[1].id).toEqual(__);
 	});
 
 });

@@ -7,7 +7,7 @@ describe('ShowHideAndAmimate', function() {
 				'<div id="div-2">'+
 				'	<div id="div-2-child">'+
 				'		<div id="div-2-grandchild" style="width:200px; height:50px; background-color:yellow;">'+
-				'			<a id="link1" href="javascript:void(0)">Hello world</a>'+
+				'			<a id="link1 href="javascript:void(0)">Hello world</a>'+
 				'			<a id="link2" href="javascript:void(0)" style="display:none">Hello world</a>'+
 				'		</div>'+
 				'   </div>'+
@@ -16,13 +16,13 @@ describe('ShowHideAndAmimate', function() {
 	});
 
 	it('shows link', function() {
-		$("#link2").show();
+		$(__).show();
 
 		expect($('#link2').is(':visible')).toBeTruthy();
 	});
 
 	it('hides link', function() {
-		$("#link1").hide();
+		__
 
 		expect($('#link1').is(':visible')).toBeFalsy();
 	});
@@ -30,7 +30,7 @@ describe('ShowHideAndAmimate', function() {
 	it('toggles link', function() {
 		expect($('#link1').is(':visible')).toBeTruthy();
 
-		$('#link1').toggle();
+		$(__).toggle();
 
 		expect($('#link1').is(':visible')).toBeFalsy();
 	});

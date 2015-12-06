@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.config('watch', {
 		options: {
-			livereload: '<%= connect.options.livereload %>',
+			livereload: 35729,
 		},
 		all : {
 			files: ['<%= srcFolder %>/**/*', 'Gruntfile.js']
@@ -23,12 +23,11 @@ module.exports = function(grunt) {
 		options: {
 			port: 8080,
 			livereload: 35729,
-			hostname: 'localhost',
-			index: 'KoansRunner.html'
+			hostname: 'localhost'
 		},
 		livereload: {
 			options: {
-				open: true,
+				open: 'http://localhost:8000/KoansRunner.html',
 				base: '<%= baseFolder %>'
 			}
 		}

@@ -14,7 +14,7 @@ describe('Events', function() {
 
 	it('registers event with a link in newest jQuery using on', function() {
 		var clicked = false;
-		$("#link1").on("click",null,function(e) {
+		$(__).on(__,__,function(e) {
 			clicked = true;
 		});
 
@@ -26,7 +26,7 @@ describe('Events', function() {
 
 	it('registers event with a link in the older jQuery version using delegate', function() {
 		var clicked = false;
-		$("#div-2").delegate("#link1","click",function(e) {
+		$(__).delegate(__,__,function(e) {
 			clicked = true;
 		});
 
@@ -36,16 +36,12 @@ describe('Events', function() {
 
 	it('makes sure delegated event is only triggered once', function() {
 		var timesTriggered = 0;
-
-/*		$('#div-2-grandchild').on('click','#link1',function(e) {
+		__
+		$('#div-2-grandchild').on('click','#link1',function(e) {
 			timesTriggered++;
 		});
-
-		$('#div-2-grandchild').off('click','#link1',function(e) {
-			timesTriggered++;
-		});*/
-
-		$('#div-2-grandchild').one('click','#link1',function(e) {
+		__
+		$('#div-2-grandchild').on('click','#link1',function(e) {
 			timesTriggered++;
 		});
 
