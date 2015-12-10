@@ -1,6 +1,5 @@
 describe('ShowHideAndAmimate', function() {
 	beforeEach(function() {
-		$('#fixture').remove();
 		$('body').append('<div id="fixture"></div>');
 		$('#fixture').html(
 				'<div class="div_class" id="div-1" />'+
@@ -13,6 +12,10 @@ describe('ShowHideAndAmimate', function() {
 				'   </div>'+
 				'</div>'+
 				'<div class="div_class" id="div-3"></div>');
+	});
+
+	afterEach(function() {
+		$('#fixture').remove();
 	});
 
 	it('shows link', function() {

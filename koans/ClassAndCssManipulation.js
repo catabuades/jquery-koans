@@ -1,6 +1,5 @@
 describe('ClassAndCssManipulation', function() {
 	beforeEach(function() {
-		$('#fixture').remove();
 		$('body').append('<div id="fixture"></div>');
 		$('#fixture').html(
 				'<div class="div_class" id="div-1" />'+
@@ -13,6 +12,11 @@ describe('ClassAndCssManipulation', function() {
 
 		this.addMatchers(jQueryKataMatchers);
 	});
+
+	afterEach(function() {
+		$('#fixture').remove();
+	});
+
 
 	it('adds class to DIV', function() {
 		$('#div-1').addClass("div-class-2");

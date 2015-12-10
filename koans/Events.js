@@ -1,6 +1,5 @@
 describe('Events', function() {
 	beforeEach(function() {
-		$('#fixture').remove();
 		$('body').append('<div id="fixture"></div>');
 		$('#fixture').html(
 				'<div class="div_class" id="div-1" />'+
@@ -11,6 +10,11 @@ describe('Events', function() {
 				'</div>'+
 				'<div class="div_class" id="div-3" />');
 	});
+
+	afterEach(function() {
+		$('#fixture').remove();
+	});
+
 
 	it('registers event with a link in newest jQuery using on', function() {
 		var clicked = false;

@@ -1,6 +1,5 @@
 describe('Selectors', function() {
 	beforeEach(function() {
-		$('#fixture').remove();
 		$('body').append('<div id="fixture"></div>');
 		$('#fixture').html(
 				'<div class="div_class" id="div-1" />'+
@@ -12,6 +11,10 @@ describe('Selectors', function() {
 				'<div class="div_class" id="div-3" />');
 
 		this.addMatchers(jQueryKataMatchers);
+	});
+
+	afterEach(function() {
+		$('#fixture').remove();
 	});
 
 	it('selects element by id', function() {
