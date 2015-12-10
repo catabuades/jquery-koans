@@ -7,7 +7,7 @@ describe('ShowHideAndAmimate', function() {
 				'<div id="div-2">'+
 				'	<div id="div-2-child">'+
 				'		<div id="div-2-grandchild" style="width:200px; height:50px; background-color:yellow;">'+
-				'			<a id="link1 href="javascript:void(0)">Hello world</a>'+
+				'			<a id="link1" href="javascript:void(0)">Hello world</a>'+
 				'			<a id="link2" href="javascript:void(0)" style="display:none">Hello world</a>'+
 				'		</div>'+
 				'   </div>'+
