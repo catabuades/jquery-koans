@@ -1,6 +1,5 @@
 describe('AddRemoveAppendElements', function() {
 	beforeEach(function() {
-		$('#fixture').remove();
 		$('body').append('<div id="fixture"></div>');
 		$('#fixture').html(
 				'<div class="div_class" id="div-1" />'+
@@ -13,6 +12,11 @@ describe('AddRemoveAppendElements', function() {
 
 		this.addMatchers(jQueryKataMatchers);
 	});
+
+	afterEach(function() {
+		$('#fixture').remove();
+	});
+
 
 	it('adds html inside element', function() {
 		$('#div-1').html('<p>O hai!</p>');
