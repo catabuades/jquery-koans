@@ -37,16 +37,14 @@ describe('Events', function() {
 	it('makes sure delegated event is only triggered once', function() {
 		var timesTriggered = 0;
 
-/*		$('#div-2-grandchild').on('click','#link1',function(e) {
+		$('#div-2-grandchild').on('click','#link1',function(e) {
 			timesTriggered++;
+			e.stopImmediatePropagation();
 		});
 
-		$('#div-2-grandchild').off('click','#link1',function(e) {
+		$('#div-2-grandchild').on('click','#link1',function(e) {
 			timesTriggered++;
-		});*/
-
-		$('#div-2-grandchild').one('click','#link1',function(e) {
-			timesTriggered++;
+			e.stopImmediatePropagation();
 		});
 
 		$('#link1').trigger('click');
