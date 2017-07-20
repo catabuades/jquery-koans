@@ -1,39 +1,39 @@
-describe('ShowHideAndAmimate', function() {
-	beforeEach(function() {
-		$('#fixture').remove();
-		$('body').append('<div id="fixture"></div>');
-		$('#fixture').html(
-				'<div class="div_class" id="div-1" />'+
-				'<div id="div-2">'+
-				'	<div id="div-2-child">'+
-				'		<div id="div-2-grandchild" style="width:200px; height:50px; background-color:yellow;">'+
-				'			<a id="link1" href="javascript:void(0)">Hello world</a>'+
-				'			<a id="link2" href="javascript:void(0)" style="display:none">Hello world</a>'+
-				'		</div>'+
-				'   </div>'+
-				'</div>'+
-				'<div class="div_class" id="div-3"></div>');
-	});
+describe('ShowHideAndAmimate', function () {
+  beforeEach(function () {
+    $('#fixture').remove()
+    $('body').append('<div id="fixture"></div>')
+    $('#fixture').html(
+				'<div class="div_class" id="div-1" />' +
+				'<div id="div-2">' +
+				'	<div id="div-2-child">' +
+				'		<div id="div-2-grandchild" style="width:200px; height:50px; background-color:yellow;">' +
+				'			<a id="link1" href="javascript:void(0)">Hello world</a>' +
+				'			<a id="link2" href="javascript:void(0)" style="display:none">Hello world</a>' +
+				'		</div>' +
+				'   </div>' +
+				'</div>' +
+				'<div class="div_class" id="div-3"></div>')
+  })
 
-	it('shows link', function() {
-		$(__).show();
+  it('shows link', function () {
+    $('#link2').show()
 
-		expect($('#link2').is(':visible')).toBeTruthy();
-	});
+    expect($('#link2').is(':visible')).toBeTruthy()
+  })
 
-	it('hides link', function() {
-		__
+  it('hides link', function () {
+    $('#link1').hide()
 
-		expect($('#link1').is(':visible')).toBeFalsy();
-	});
+    expect($('#link1').is(':visible')).toBeFalsy()
+  })
 
-	it('toggles link', function() {
-		expect($('#link1').is(':visible')).toBeTruthy();
+  it('toggles link', function () {
+    expect($('#link1').is(':visible')).toBeTruthy()
 
-		$(__).toggle();
+    $('#link1').toggle()
 
-		expect($('#link1').is(':visible')).toBeFalsy();
-	});
+    expect($('#link1').is(':visible')).toBeFalsy()
+  })
 
 //	it('fades out link', function() {
 //		$(__).fadeOut(__);
@@ -65,5 +65,4 @@ describe('ShowHideAndAmimate', function() {
 //			expect(done).toEqual(true);
 //		});
 //	});
-
-});
+})
